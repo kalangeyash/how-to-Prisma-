@@ -28,3 +28,7 @@ model Todo {
   description String?
   userId Int
 }
+model Link{
+  id Int @id @default(autoincrement())
+  authorId User @relation(onUpdate: id)
+}
