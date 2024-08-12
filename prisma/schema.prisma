@@ -30,5 +30,5 @@ model Todo {
 }
 model Link{
   id Int @id @default(autoincrement())
-  authorId User @relation(onUpdate: id)
+
 }
