@@ -39,7 +39,20 @@ async function updateUser(username:string , {firstName,lastName}:UpdateParams)
     })
 }
 
-updateUser("yash@gmail.com", {
-    firstName: "Kamna",
-    lastName : "Bhadoriya"
-})
+// updateUser("yash@gmail.com", {
+//     firstName: "Kamna",
+//     lastName : "Bhadoriya"
+// })
+
+async function deleteUser (username :string)
+{
+    const res = await prisma.user.delete({
+        where:{
+            email : username
+        }
+
+    })
+    console.log(res)
+}
+
+deleteUser("yash@gmail.com")

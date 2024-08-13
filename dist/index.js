@@ -37,7 +37,18 @@ function updateUser(username_1, _a) {
         });
     });
 }
-updateUser("yash@gmail.com", {
-    firstName: "Kamna",
-    lastName: "Bhadoriya"
-});
+// updateUser("yash@gmail.com", {
+//     firstName: "Kamna",
+//     lastName : "Bhadoriya"
+// })
+function deleteUser(username) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield prisma.user.delete({
+            where: {
+                email: username
+            }
+        });
+        console.log(res);
+    });
+}
+deleteUser("yash@gmail.com");
