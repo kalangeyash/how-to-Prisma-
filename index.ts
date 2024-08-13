@@ -18,3 +18,7 @@ async function insertUser (username: string , password: string , firstName:strin
     )
     console.log(result)
 }
+insertUser("yash@gmail.com" , "password" , "Yash" , "Kalange")
+// interface UpdateParams {
+
+// }
