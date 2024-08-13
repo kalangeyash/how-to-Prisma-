@@ -7,7 +7,7 @@
 generator client {
   provider = "prisma-client-js"
 }
-
+ 
 datasource db {
   provider = "postgresql"
   url      = "postgresql://yashkalange127:tgBqQrGbz9T8@ep-dry-snowflake-a5y98wul.us-east-2.aws.neon.tech/test?sslmode=require"
@@ -27,8 +27,4 @@ model Todo {
   done Boolean @default(false)
   description String?
   userId Int
-}
-model Link{
-  id Int @id @default(autoincrement())
-
 }
